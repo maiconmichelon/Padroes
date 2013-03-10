@@ -2,6 +2,15 @@ package command;
 
 public class GarageDoor {
 
+	private String local;
+
+	public GarageDoor(String local) {
+		this.local = local;
+	}
+	
+	public GarageDoor() {
+	}
+	
 	public void open() {
 		System.out.println("Open");
 	}
