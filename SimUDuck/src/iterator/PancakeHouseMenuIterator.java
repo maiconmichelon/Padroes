@@ -1,13 +1,14 @@
 package iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class PancakeHouseMenuIterator implements Iterator{
+public class PancakeHouseMenuIterator implements Iterator<MenuItem>{
 
-	private final ArrayList itens;
+	private final ArrayList<MenuItem> itens;
 	private int position;
 	
-	public PancakeHouseMenuIterator(ArrayList itens) {
+	public PancakeHouseMenuIterator(ArrayList<MenuItem> itens) {
 		this.itens = itens;
 	}
 	
@@ -19,8 +20,13 @@ public class PancakeHouseMenuIterator implements Iterator{
 	}
 
 	@Override
-	public Object next() {
+	public MenuItem next() {
 		return itens.get(position++);
+	}
+
+	@Override
+	public void remove() {
+		throw new UnsupportedOperationException();
 	}
 
 }
