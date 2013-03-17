@@ -2,9 +2,9 @@ package iterator;
 
 public class MenuItem {
 
-	private final String nome;
-	private final boolean vegetariano;
-	private final double valor;
+	private String nome;
+	private boolean vegetariano;
+	private double valor;
 
 	public MenuItem(String nome, boolean vegetariano, double valor) {
 		this.nome = nome;

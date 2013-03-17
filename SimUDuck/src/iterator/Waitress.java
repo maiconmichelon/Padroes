@@ -1,26 +1,20 @@
 package iterator;
 
 import java.util.Iterator;
+import java.util.List;
 
 public class Waitress {
 	
-	Menu pancakeHouseMenu;
-	Menu dinerMenu;
+	List<Menu> menus;
 	
-	public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
-		this.pancakeHouseMenu = pancakeHouseMenu;
-		this.dinerMenu = dinerMenu;
+	public Waitress(List<Menu> menu) {
+		menus = menu;
 	}
-	
+
 	public void printMenu(){
-		Iterator<MenuItem> pancake = pancakeHouseMenu.createIterator();
-		Iterator<MenuItem> diner = dinerMenu.createIterator();
-		
-		System.out.println("Menu");
-		printMenu(pancake);
-		System.out.println("\nLunch");
-		printMenu(diner);
-		
+		for(Menu menu : menus){
+			printMenu(menu.createIterator());
+		}
 	}
 
 	private void printMenu(Iterator<MenuItem> iterator) {
