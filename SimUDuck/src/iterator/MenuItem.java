@@ -6,6 +6,7 @@ import composite.MenuComponent;
 
 public class MenuItem extends MenuComponent{
 
+	private ArrayList<MenuComponent> menuComponents;
 	private String nome;
 	private boolean vegetariano;
 	private double valor;
@@ -47,7 +48,7 @@ public class MenuItem extends MenuComponent{
 	@Override
 	public void print() {
 		System.out.println(getNome());
-		System.out.println(isVegetarian() ? "\nVegetariano" + "\nNão vegetariano");
+		System.out.println(isVegetarian() ? "\nVegetariano" : "\nNão vegetariano");
 		System.out.println("\n"+getPreco());
 	}
 	
