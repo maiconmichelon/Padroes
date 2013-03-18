@@ -3,14 +3,21 @@ package iterator;
 import java.util.Iterator;
 import java.util.List;
 
+import iterator.composite.MenuComponent;
+
 public class Waitress {
 	
 	List<Menu> menus;
+	private MenuComponent mc;
 	
 	public Waitress(List<Menu> menu) {
 		menus = menu;
 	}
 
+	public Waitress(MenuComponent mc){
+		this.mc = mc;
+	}
+	
 	public void printMenu(){
 		for(Menu menu : menus){
 			printMenu(menu.createIterator());
@@ -26,4 +33,8 @@ public class Waitress {
 		}
 	}
 
+	public void printMenuMC(){
+		mc.print();
+	}
+	
 }

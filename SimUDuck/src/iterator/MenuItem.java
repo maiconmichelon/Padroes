@@ -1,8 +1,8 @@
 package iterator;
 
-import java.util.ArrayList;
+import iterator.composite.MenuComponent;
 
-import composite.MenuComponent;
+import java.util.ArrayList;
 
 public class MenuItem extends MenuComponent{
 
