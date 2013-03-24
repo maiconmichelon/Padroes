@@ -2,7 +2,11 @@ package state;
 
 public class NoQuarterState implements State{
 	
-	GumballMachine gm;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	transient GumballMachine gm;
 	
 	public NoQuarterState(GumballMachine gm) {
 		this.gm = gm;
